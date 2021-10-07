@@ -47,12 +47,13 @@ These are some typical folders that live in the source directory:
   from another domain. If this happens consider moving those parts to a shared
   location outside of the domain folder like the ones described below. Some
   examples of folders in domains are `onboarding`, `flights`, `reviews`,
-  `hotels`, `settings`. The root of this folder *should not have a barrel file*.
+  `hotels`, `settings`. The root of this folder **should not have a barrel
+  file**.
 * `modules` or `services`: An group of logic functions that is used by one or
   more domains. Some examples are `firestore`, `logging`, `messaging`,
-  `storage`. These could be helper functions around external APIs like Firebase,
-  or some code that could potentially be released as a separate module on NPM.
-  The root of this folder *should not have a barrel file*.
+  `storage`. These could be helper/convenience functions around external APIs
+  like Firebase, or some code that could potentially be released as a separate
+  module on NPM. The root of this folder **should not have a barrel file**.
 * `utils`: Very generic and simple utility functions that are likely to be used
   across several domains, components and modules. Using a barrel file in this
   folder would likely not be a problem.

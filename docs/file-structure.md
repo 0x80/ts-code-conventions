@@ -47,16 +47,21 @@ These are some typical folders that live in the source directory:
   from another domain. If this happens consider moving those parts to a shared
   location outside of the domain folder like the ones described below. Some
   examples of folders in domains are `onboarding`, `flights`, `reviews`,
-  `hotels`, `settings`.
+  `hotels`, `settings`. The root of this folder *should not have a barrel file*.
 * `modules` or `services`: An group of logic functions that is used by one or
   more domains. Some examples are `firestore`, `logging`, `messaging`,
   `storage`. These could be helper functions around external APIs like Firebase,
   or some code that could potentially be released as a separate module on NPM.
+  The root of this folder *should not have a barrel file*.
 * `utils`: Very generic and simple utility functions that are likely to be used
-  across several domains, components and modules.
+  across several domains, components and modules. Using a barrel file in this
+  folder would likely not be a problem.
 * `components`: React components that are shared between different domains. If a
-  component is
-* `hooks`: React hooks that are shared between different components.
+  component is. If you've used the domains as described, then this folder would
+  mostly contain components that are used regularly, so you could consider using
+  a barrel file here.
+* `hooks`: React hooks that are shared between different components. Using a
+  barrel file in this folder would likely not be a problem.
 
 ## Domain folder structure
 
